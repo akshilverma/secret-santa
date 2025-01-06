@@ -2,27 +2,21 @@
 	"extends": "@tsconfig/node22/tsconfig.json",
 	"compilerOptions": {
 		/* Projects */
-		"moduleDetection": "force", /* Control what method is used to detect module-format JS files. */
+		"moduleDetection": "force" /* Control what method is used to detect module-format JS files. */,
 		/* Modules */
-		"rootDir": "./", /* Specify the root folder within your source files. */
-		"allowImportingTsExtensions": true, /* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */
-		"resolveJsonModule": true, /* Enable importing .json files. */
+		"rootDir": "./" /* Specify the root folder within your source files. */,
+		"allowImportingTsExtensions": true /* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */,
+		"resolveJsonModule": true /* Enable importing .json files. */,
 		/* Emit */
-		"noEmit": true, /* Disable emitting files from a compilation. */
-		"outDir": "./dist", /* Specify an output folder for all emitted files. */
+		"noEmit": true /* Disable emitting files from a compilation. */,
+		"outDir": "./dist" /* Specify an output folder for all emitted files. */,
 		/* Interop Constraints */
-		"isolatedModules": true, /* Ensure that each file can be safely transpiled without relying on other imports. */
-		"verbatimModuleSyntax": true, /* Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's format based on the 'module' setting. */
-		"forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+		"isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 		/* Type Checking */
-		"noUncheckedIndexedAccess": true, /* Add 'undefined' to a type when accessed using an index. */
+		"noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
 		"noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */
 	},
-	"include": [
-		"src/**/*.ts",
-		"test/**/*.ts",
-	],
-	"exclude": [
-		"dist/**/*",
-	]
+	"include": ["src/**/*.ts", "test/**/*.ts"],
+	"exclude": ["dist/**/*"]
 }
