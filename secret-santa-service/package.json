@@ -1,15 +1,21 @@
 {
 	"name": "secret-santa-service",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "A typescript based application to manage your secret santa event.",
-	"main": "index.ts",
+	"engines": {
+		"node": "^22",
+		"npm": ">=10"
+	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "rimraf dist && tsc",
+		"start:dev": "ts-node ./src/index.ts"
 	},
 	"author": "akshilverma",
 	"license": "MIT",
 	"devDependencies": {
 		"@tsconfig/node22": "^22.0.0",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.7.2"
 	}
 }
