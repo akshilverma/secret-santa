@@ -1,0 +1,15 @@
+{
+	"name": "secret-santa-service",
+	"version": "0.0.0",
+	"description": "A typescript based application to manage your secret santa event.",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "akshilverma",
+	"license": "MIT",
+	"devDependencies": {
+		"@tsconfig/node22": "^22.0.0",
+		"typescript": "^5.7.2"
+	}
+}
