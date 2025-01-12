@@ -3,17 +3,20 @@ import app from "./app";
 const { PORT = "3000" } = process.env;
 
 // Start server at PORT
-const server = app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
-}).on("error", (error) => {
-	console.error("Error starting server:", error.message);
-});
+const server = app
+	.listen(PORT, () => {
+		console.log(`Server is running on port ${PORT}`);
+	})
+	.on("error", (error) => {
+		console.error("Error starting server:", error.message);
+	});
 
 // Graceful shutdown
-const shutdown = (signal: 'SIGINT' | 'SIGTERM') => server.close(() => {
-	console.log(`${signal} signal received: Shutting down server.`);
-	process.exit(0);
-});
+const shutdown = (signal: "SIGINT" | "SIGTERM") =>
+	server.close(() => {
+		console.log(`${signal} signal received: Shutting down server.`);
+		process.exit(0);
+	});
 
-process.on('SIGINT', shutdown);
-process.on('SIGTERM', shutdown);
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
