@@ -8,14 +8,15 @@
 	},
 	"scripts": {
 		"build": "rimraf dist && tsc",
+		"format": "prettier --write --ignore-unknown src",
 		"lint": "eslint --fix src",
 		"start:dev": "node --watch --env-file-if-exists=.env -r ts-node/register ./src/server.ts",
 		"prepare": "husky"
 	},
 	"lint-staged": {
 		"**/*": [
-			"eslint --fix",
-			"prettier --write --ignore-unknown"
+			"eslint --fix src",
+			"prettier --write --ignore-unknown src"
 		]
 	},
 	"author": "akshilverma",
