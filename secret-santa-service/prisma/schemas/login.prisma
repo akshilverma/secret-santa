@@ -1,0 +1,9 @@
+model Login {
+    id           String @id @default(uuid())
+    passwordHash String @db.VarChar(72)
+    user         User   @relation(fields: [userId, userEmail], references: [id, email])
+    userId       String @unique
+    userEmail    String @unique
+
+    @@unique([userId, userEmail])
+}
