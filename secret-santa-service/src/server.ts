@@ -1,18 +1,19 @@
-import express from "express";
-
-const app = express();
+import app from "./app";
 
 const { PORT = "3000" } = process.env;
 
-// TODO: convert app to application.ts and add routes
-app.get("/health", (_, res) => {
-	res.status(200).json({ status: "ok" });
-});
-
-app.get("/api/v1", () => { console.log("API v1"); });
-
-app.listen(PORT, () => {
-	console.log(`Server is running on http://localhost:${PORT}`);
+// Start server at PORT
+const server = app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
 }).on("error", (error) => {
-	console.error("Error starting server:", error);
+	console.error("Error starting server:", error.message);
 });
+
+// Graceful shutdown
+const shutdown = (signal: 'SIGINT' | 'SIGTERM') => server.close(() => {
+	console.log(`${signal} signal received: Shutting down server.`);
+	process.exit(0);
+});
+
+process.on('SIGINT', shutdown);
+process.on('SIGTERM', shutdown);
