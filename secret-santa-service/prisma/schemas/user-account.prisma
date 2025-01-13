@@ -1,0 +1,16 @@
+model UserAccount {
+    id           String      @id @default(uuid())
+    userName     String      @unique @map("user_name") @db.VarChar(64)
+    email        String      @unique @db.VarChar(254)
+    createdAt    DateTime    @default(now()) @map("created_at")
+    updatedAt    DateTime    @updatedAt @map("updated_at")
+    role         Role        @default(USER)
+    accountLogin Credential?
+
+    @@map("user_accounts")
+}
+
+enum Role {
+    ADMIN
+    USER
+}
