@@ -2,10 +2,12 @@ import bcrypt from "bcrypt";
 
 export async function hashPassword(password: string) {
 	try {
-		const hash = await bcrypt.hash(password, 10);
-		return hash;
+		return await bcrypt.hash(password, 12);
 	} catch (error) {
 		console.error("Error generating hashed password", error);
-		throw new Error("Error hashing password");
+		// TODO: create a custom error class
+		const hashingError = new Error("Error hashing password");
+		hashingError.name = "HashingError";
+		throw hashingError;
 	}
 }
