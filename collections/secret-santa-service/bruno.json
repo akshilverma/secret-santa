@@ -1,9 +1,9 @@
 {
-  "version": "1",
-  "name": "ss-service",
-  "type": "collection",
-  "ignore": [
-    "node_modules",
-    ".git"
-  ]
+	"version": "1",
+	"name": "ss-service",
+	"type": "collection",
+	"ignore": [
+		"node_modules",
+		".git"
+	]
 }

@@ -1,23 +1,14 @@
 {
 	"name": "secret-santa-service",
 	"version": "0.0.1",
-	"description": "A typescript based application to manage your secret santa event.",
+	"description": "The secret santa microservice.",
 	"engines": {
 		"node": "^22",
 		"npm": ">=10"
 	},
 	"scripts": {
 		"build": "rimraf dist && tsc",
-		"format": "prettier --write --ignore-unknown src",
-		"lint": "eslint --fix src",
-		"start:dev": "node --watch --env-file-if-exists=.env -r ts-node/register ./src/server.ts",
-		"prepare": "husky"
-	},
-	"lint-staged": {
-		"**/*": [
-			"eslint --fix src",
-			"prettier --write --ignore-unknown src"
-		]
+		"start:dev": "node --watch --env-file-if-exists=.env -r ts-node/register ./src/server.ts"
 	},
 	"author": "akshilverma",
 	"license": "MIT",
@@ -28,20 +19,10 @@
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.17.0",
-		"@tsconfig/node22": "^22.0.0",
 		"@types/bcrypt": "^5.0.2",
 		"@types/express": "^5.0.0",
-		"eslint": "^9.17.0",
-		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.14.0",
-		"husky": "^9.1.7",
-		"lint-staged": "^15.3.0",
-		"prettier": "3.4.2",
 		"prisma": "^6.2.1",
-		"rimraf": "^6.0.1",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.7.2",
-		"typescript-eslint": "^8.19.1"
+		"rimraf": "^6.0.1"
 	}
 }

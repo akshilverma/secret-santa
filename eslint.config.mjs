@@ -6,7 +6,10 @@ import eslintConfigPrettier from "eslint-config-prettier";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
 	{
-		files: ["src/**/*.{js,mjs,cjs,ts}", "test/**/*.{js,mjs,cjs,ts}"],
+		ignores: ["node_modules/", "dist/", "collections/", "eslint.config.mjs"],
+	},
+	{
+		files: ["**/*.{js,mjs,cjs,ts}"],
 		languageOptions: {
 			globals: globals.node,
 			parser: "@typescript-eslint/parser",
@@ -25,21 +28,15 @@ export default [
 			eqeqeq: "warn",
 			"no-unused-vars": "error",
 			"no-trailing-spaces": "warn",
-			"eol-last": [
-				"error",
-				"always"
-			],
+			"eol-last": ["error", "always"],
 			"no-multiple-empty-lines": [
 				"error",
 				{
-					"max": 2,
-					"maxEOF": 1
-				}
+					max: 2,
+					maxEOF: 1,
+				},
 			],
-			"complexity": [
-				"error",
-				5
-			]
+			complexity: ["error", 5],
 		},
-	}
+	},
 ];

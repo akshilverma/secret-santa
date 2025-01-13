@@ -1,0 +1,30 @@
+{
+	"name": "secret-santa",
+	"version": "0.0.1",
+	"description": "A typescript based application to manage your secret santa event.",
+	"scripts": {
+		"format": "prettier --write --ignore-unknown **/*",
+		"lint": "eslint --fix",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"**/*": [
+			"eslint --fix",
+			"prettier --write --ignore-unknown"
+		]
+	},
+	"author": "akshilverma",
+	"license": "MIT",
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@tsconfig/node22": "^22.0.0",
+		"eslint": "^9.17.0",
+		"eslint-config-prettier": "^9.1.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.3.0",
+		"prettier": "^3.4.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.20.0"
+	}
+}

@@ -17,6 +17,6 @@
 		"noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
 		"noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */
 	},
-	"include": ["src/**/*.ts", "test/**/*.ts"],
-	"exclude": ["dist/**/*"]
+	"include": ["secret-santa-service/**/*"],
+	"exclude": ["dist/, collections/, node_modules/"]
 }
