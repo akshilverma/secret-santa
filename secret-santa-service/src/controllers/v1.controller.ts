@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { hashPassword } from "../lib/auth";
-import { registerSchema } from "../schemas/v1.schema";
+import { hashPassword } from "@/lib/auth";
+import { registerSchema } from "@/schemas/v1.schema";
 import { PrismaClient } from "@prisma/client";
 
 export async function registerController(req: Request, res: Response) {
