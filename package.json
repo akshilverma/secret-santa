@@ -4,24 +4,21 @@
 	"description": "A typescript based application to manage your secret santa event.",
 	"scripts": {
 		"format": "prettier --write --ignore-unknown **/*",
-		"lint": "eslint --fix",
+		"lint:frontend-service": "cd frontend-service; npm run lint",
+		"lint:secret-santa-service": "cd secret-santa-service; npm run lint",
 		"prepare": "husky"
 	},
 	"lint-staged": {
 		"**/*": [
-			"eslint --fix",
+			"npm run lint:secret-santa-service",
 			"prettier --write --ignore-unknown"
 		]
 	},
 	"author": "akshilverma",
 	"license": "MIT",
 	"devDependencies": {
-		"@eslint/js": "^9.17.0",
-		"eslint": "^9.17.0",
-		"eslint-config-prettier": "^9.1.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.3.0",
-		"prettier": "^3.4.2",
-		"typescript-eslint": "^8.20.0"
+		"prettier": "^3.4.2"
 	}
 }

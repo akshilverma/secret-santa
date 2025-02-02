@@ -9,7 +9,7 @@ export default [
 		ignores: ["node_modules/", "dist/", "collections/", "eslint.config.mjs"],
 	},
 	{
-		files: ["**/*.{js,mjs,cjs,ts}"],
+		files: ["**/*.{js,ts}"],
 		languageOptions: {
 			globals: globals.node,
 			parser: "@typescript-eslint/parser",
