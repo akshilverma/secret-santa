@@ -5,7 +5,7 @@ const app = express();
 
 // Health check endpoint
 app.get("/health", (_, res) => {
-	res.status(200).json({ status: "ok" });
+    res.status(200).json({ status: "ok" });
 });
 
 // API routes
