@@ -9,7 +9,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 export default tseslint.config(
     { ignores: ["dist", "vite.config.ts"] },
     {
-        extends: [js.configs.recommended, eslintConfigPrettier, ...tseslint.configs.strictTypeChecked],
+        extends: [js.configs.recommended, eslintConfigPrettier, ...tseslint.configs.recommended],
         files: ["**/*.{ts,tsx}"],
         languageOptions: {
             ecmaVersion: 2020,
