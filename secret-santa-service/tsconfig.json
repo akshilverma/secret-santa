@@ -1,29 +1,24 @@
 {
-	"extends": "@tsconfig/node22/tsconfig.json",
-	"compilerOptions": {
-		/* Projects */
-		"moduleDetection": "force" /* Control what method is used to detect module-format JS files. */,
-		/* Modules */
-		"rootDir": "./" /* Specify the root folder within your source files. */,
-		"allowImportingTsExtensions": true /* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */,
-		"resolveJsonModule": true /* Enable importing .json files. */,
-		/* Emit */
-		"noEmit": true /* Disable emitting files from a compilation. */,
-		"outDir": "./dist" /* Specify an output folder for all emitted files. */,
-		/* Interop Constraints */
-		"isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
-		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-		/* Type Checking */
-		"noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
-		"noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
-		"incremental": true /* Enable incremental compilation. */,
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	},
-	"ts-node": {
-		"require": ["tsconfig-paths/register"]
-	},
-	"include": ["**/*.ts"],
-	"exclude": ["dist/, collections/, node_modules/"]
+    "extends": "@tsconfig/node22/tsconfig.json",
+    "compilerOptions": {
+        "moduleDetection": "force",
+        "rootDir": "./",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "outDir": "./dist",
+        "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "incremental": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["dist/, collections/, node_modules/"]
 }

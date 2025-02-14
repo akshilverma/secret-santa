@@ -1,24 +1,25 @@
 {
-	"name": "secret-santa",
-	"version": "0.0.1",
-	"description": "A typescript based application to manage your secret santa event.",
-	"scripts": {
-		"format": "prettier --write --ignore-unknown **/*",
-		"lint:frontend-service": "cd frontend-service; npm run lint",
-		"lint:secret-santa-service": "cd secret-santa-service; npm run lint",
-		"prepare": "husky"
-	},
-	"lint-staged": {
-		"**/*": [
-			"npm run lint:secret-santa-service",
-			"prettier --write --ignore-unknown"
-		]
-	},
-	"author": "akshilverma",
-	"license": "MIT",
-	"devDependencies": {
-		"husky": "^9.1.7",
-		"lint-staged": "^15.3.0",
-		"prettier": "^3.4.2"
-	}
+    "name": "secret-santa",
+    "version": "0.0.1",
+    "description": "A typescript based application to manage your secret santa event.",
+    "scripts": {
+        "format": "prettier --write --ignore-unknown **/*",
+        "lint:frontend-service": "cd frontend-service; npm run lint",
+        "lint:secret-santa-service": "cd secret-santa-service; npm run lint",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "**/*": [
+            "npm run lint:frontend-service",
+            "npm run lint:secret-santa-service",
+            "prettier --write --ignore-unknown"
+        ]
+    },
+    "author": "akshilverma",
+    "license": "MIT",
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^15.3.0",
+        "prettier": "^3.4.2"
+    }
 }
