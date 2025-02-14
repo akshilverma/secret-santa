@@ -1,6 +1,7 @@
-import { json, Router } from "express";
-import { registerController } from "../controllers/v1.controller";
 import { PrismaClient } from "@prisma/client";
+import { Router, json } from "express";
+
+import { registerController } from "@/controllers/v1.controller";
 
 const v1Router = Router();
 

@@ -1,0 +1,18 @@
+{
+    "importOrder": [
+        "^(react/(.*)$)|^(react$)",
+        "<THIRD_PARTY_MODULES>",
+        "^@/types/(.*)$",
+        "^@/context/(.*)$",
+        "^@/lib/(.*)$",
+        "^@/hooks/(.*)$",
+        "^@/utils/(.*)$",
+        "^@/components/ui/(.*)$",
+        "^@/components/(.*)$",
+        "^[./]"
+    ],
+    "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}

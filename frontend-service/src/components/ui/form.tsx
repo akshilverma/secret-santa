@@ -1,13 +1,23 @@
+import { ComponentProps, useId } from "react";
+
+import { Root } from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
-import { Controller, ControllerProps, FieldPath, FieldValues, FormProvider } from "react-hook-form";
+import {
+    Controller,
+    ControllerProps,
+    FieldPath,
+    FieldValues,
+    FormProvider,
+} from "react-hook-form";
+
+import FormFieldContext from "@/context/forms/form-field-context";
+import FormItemContext from "@/context/forms/form-item-context";
 
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
-import FormFieldContext from "@/context/forms/form-field-context";
-import { ComponentProps, useId } from "react";
-import FormItemContext from "@/context/forms/form-item-context";
+
 import useFormField from "@/hooks/use-form-field";
-import { Root } from "@radix-ui/react-label";
+
+import { Label } from "@/components/ui/label";
 
 const Form = FormProvider;
 
@@ -29,7 +39,11 @@ function FormItem({ className, ...props }: ComponentProps<"div">) {
 
     return (
         <FormItemContext.Provider value={{ id }}>
-            <div data-slot="form-item" className={cn("grid gap-2", className)} {...props} />
+            <div
+                data-slot="form-item"
+                className={cn("grid gap-2", className)}
+                {...props}
+            />
         </FormItemContext.Provider>
     );
 }
@@ -49,13 +63,18 @@ function FormLabel({ className, ...props }: ComponentProps<typeof Root>) {
 }
 
 function FormControl({ ...props }: ComponentProps<typeof Slot>) {
-    const { error, formItemId, formDescriptionId, formMessageId } = useFormField();
+    const { error, formItemId, formDescriptionId, formMessageId } =
+        useFormField();
 
     return (
         <Slot
             data-slot="form-control"
             id={formItemId}
-            aria-describedby={!error ? `${formDescriptionId}` : `${formDescriptionId} ${formMessageId}`}
+            aria-describedby={
+                !error
+                    ? `${formDescriptionId}`
+                    : `${formDescriptionId} ${formMessageId}`
+            }
             aria-invalid={!!error}
             {...props}
         />
@@ -95,4 +114,12 @@ function FormMessage({ className, ...props }: ComponentProps<"p">) {
     );
 }
 
-export { Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField };
+export {
+    Form,
+    FormItem,
+    FormLabel,
+    FormControl,
+    FormDescription,
+    FormMessage,
+    FormField,
+};

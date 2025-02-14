@@ -1,12 +1,17 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
     {
-        ignores: ["node_modules/", "dist/", "collections/", "eslint.config.mjs"],
+        ignores: [
+            "node_modules/",
+            "dist/",
+            "collections/",
+            "eslint.config.mjs",
+        ],
     },
     {
         files: ["**/*.{js,ts}"],

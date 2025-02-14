@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router";
+
 import "./App.css";
 import Button from "./components/ui/button";
 import Register from "./pages/register";

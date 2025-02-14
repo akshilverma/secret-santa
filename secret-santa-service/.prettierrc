@@ -1,0 +1,16 @@
+{
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^@/types/(.*)$",
+        "^@/lib/(.*)$",
+        "^@/controllers/(.*)$",
+        "^@/schemas/(.*)$",
+        "^@/routes/(.*)$",
+        "^@/utils/(.*)$",
+        "^[./]"
+    ],
+    "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
