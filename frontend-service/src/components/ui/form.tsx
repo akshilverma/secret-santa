@@ -1,5 +1,7 @@
 import { ComponentProps, useId } from "react";
 
+import FormFieldContext from "@/contexts/forms/form-field-context";
+import FormItemContext from "@/contexts/forms/form-item-context";
 import { Root } from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 import {
@@ -10,12 +12,9 @@ import {
     FormProvider,
 } from "react-hook-form";
 
-import FormFieldContext from "@/context/forms/form-field-context";
-import FormItemContext from "@/context/forms/form-item-context";
-
-import { cn } from "@/lib/utils";
-
 import useFormField from "@/hooks/use-form-field";
+
+import { cn } from "@/utils/utils";
 
 import { Label } from "@/components/ui/label";
 
