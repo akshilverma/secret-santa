@@ -37,6 +37,7 @@ export async function registerController(req: Request, res: Response) {
             });
     } catch (error) {
         console.error("Error registering:", error);
+        // TODO: add proper error handling
         res.sendStatus(400);
     }
 }

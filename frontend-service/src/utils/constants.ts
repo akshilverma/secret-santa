@@ -1,6 +1,3 @@
-// URLs
-export const SECRET_SANTA_SERVICE_BASE_URL = "http://localhost:4000/api/v1";
-
 // UI Display Texys
 // Generic pattern here is to prefix the feature name for all constants
 
