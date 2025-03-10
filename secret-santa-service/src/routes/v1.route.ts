@@ -1,12 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import cors, { CorsOptions } from "cors";
+import cors, { type CorsOptions } from "cors";
 import { Router, json } from "express";
 
-import { registerController } from "@/controllers/v1.controller";
+import { registerController } from "#src/controllers/v1.controller.ts";
 
 const v1Router = Router();
 
 const corsOptions: CorsOptions = {
+    // TODO: origin to be updated based on environment variables
     origin: "http://localhost:5172",
     methods: "POST",
     maxAge: 600,

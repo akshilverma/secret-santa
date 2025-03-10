@@ -7,7 +7,7 @@ model UserAccount {
     updatedAt    DateTime @updatedAt @map("updated_at")
     role         Role     @default(USER)
 
-    @@index([username, email], type: Hash)
+    @@index([username, email])
     @@map("user_accounts")
 }
 

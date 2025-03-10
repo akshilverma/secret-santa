@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import v1Router from "@/routes/v1.route";
+import v1Router from "#src/routes/v1.route.ts";
 
 const apiRouter = Router();
 

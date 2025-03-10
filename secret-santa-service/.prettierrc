@@ -1,12 +1,12 @@
 {
     "importOrder": [
         "<THIRD_PARTY_MODULES>",
-        "^@/types/(.*)$",
-        "^@/lib/(.*)$",
-        "^@/controllers/(.*)$",
-        "^@/schemas/(.*)$",
-        "^@/routes/(.*)$",
-        "^@/utils/(.*)$",
+        "^#src/types/(.*)$",
+        "^#src/lib/(.*)$",
+        "^#src/controllers/(.*)$",
+        "^#src/schemas/(.*)$",
+        "^#src/routes/(.*)$",
+        "^#src/utils/(.*)$",
         "^[./]"
     ],
     "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],

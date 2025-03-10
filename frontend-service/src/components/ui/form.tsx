@@ -1,7 +1,5 @@
 import { ComponentProps, useId } from "react";
 
-import FormFieldContext from "@/contexts/forms/form-field-context";
-import FormItemContext from "@/contexts/forms/form-item-context";
 import { Root } from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 import {
@@ -12,11 +10,14 @@ import {
     FormProvider,
 } from "react-hook-form";
 
-import useFormField from "@/hooks/use-form-field";
+import FormFieldContext from "#src/contexts/forms/form-field-context.ts";
+import FormItemContext from "#src/contexts/forms/form-item-context.ts";
 
-import { cn } from "@/utils/utils";
+import useFormField from "#src/hooks/use-form-field.tsx";
 
-import { Label } from "@/components/ui/label";
+import { cn } from "#src/utils/utils.ts";
+
+import { Label } from "#src/components/ui/label.tsx";
 
 const Form = FormProvider;
 

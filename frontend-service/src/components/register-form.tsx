@@ -14,10 +14,9 @@ import {
     REGISTER_SUBMIT,
     REGISTER_TITLE,
     REGISTER_USERNAME,
-} from "@/utils/constants";
-import { encodeBase64 } from "@/utils/utils";
+} from "#src/utils/constants.ts";
+import { encodeBase64 } from "#src/utils/utils.ts";
 
-import Button from "./ui/button";
 import {
     Card,
     CardContent,
@@ -25,7 +24,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "./ui/card";
+} from "#src/components/ui/card.tsx";
 import {
     Form,
     FormControl,
@@ -33,8 +32,10 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
+} from "#src/components/ui/form.tsx";
+import { Input } from "#src/components/ui/input.tsx";
+
+import Button from "./ui/button";
 
 const passwordRegexPattern =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-={}|[\]\\:";'<>?,./])[A-Za-z\d!@#$%^&*()_+-={}|[\]\\:";'<>?,./]{8,}$/;

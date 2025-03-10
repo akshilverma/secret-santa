@@ -1,8 +1,9 @@
+import Register from "#src/pages/register.tsx";
 import { Route, Routes } from "react-router";
 
+import Button from "#src/components/ui/button.tsx";
+
 import "./App.css";
-import Button from "./components/ui/button";
-import Register from "./pages/register";
 
 function App() {
     return (

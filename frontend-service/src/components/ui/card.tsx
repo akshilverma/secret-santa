@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-import { cn } from "@/utils/utils";
+import { cn } from "#src/utils/utils.ts";
 
 function Card({ className, ...props }: ComponentProps<"div">) {
     return (
